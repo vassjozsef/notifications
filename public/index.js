@@ -15,11 +15,16 @@ async function requestPermission() {
 function showNotification() {
   let Notification = window.Notification;
 
+  const now = Date.now();
+
   const title = 'Title';
-  const body = 'Body';
+  const body = `Body ${now}`;
   
   const notificationOptions = {
+    icon: 'http://cdn.discordapp.com/avatars/362786096926556160/beab1e05879ecd9ad146000aecbd481f.png?size=128',
     body,
+    tag: now,
+    silent: true,
   };
 
   let notification;
